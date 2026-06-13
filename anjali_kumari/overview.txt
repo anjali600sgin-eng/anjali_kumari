@@ -1,0 +1,44 @@
+PLIXORA
+Online Gaming Website - Overview
+==============================================================
+
+Plixora is a free online gaming website where people can jump
+straight into browser games. No downloads, no installs, and no
+sign up. You open the page, pick a game, and you are playing
+within seconds, whether you are on a phone, a tablet, or a laptop.
+
+The idea is simple. Most casual games today hide behind app
+stores, accounts, or cluttered, ad heavy pages. Plixora pulls
+instantly playable games into one clean, fast place that is easy
+to browse and safe for all ages.
+
+It is a full product, not just a nice looking front page. There
+is the website people visit, a backend with APIs, a database that
+holds the games, and an admin panel so the team can add and update
+games without touching any code. Signing in stays optional, but if
+you do make an account, your favourites and recently played games
+follow you from one device to the next.
+
+A few quick facts:
+- Name: Plixora
+- Tagline: Play Instantly. Anywhere. Free.
+- What it is: an instant play games portal
+- Works on: desktop, tablet, and mobile
+- Built with: PERN stack (PostgreSQL, Express, React, Node.js)
+- Brand colours: Plixora Purple #7C5CFF with Teal #00D1B2
+
+Who it is for: casual players who want a quick break, students
+between classes, mobile users who would rather not install an app,
+and parents looking for something safe for their kids. Behind the
+scenes, admins keep the catalogue fresh.
+
+What success looks like: the homepage loads in under 2.5 seconds,
+you are in a game in under 5, and the site feels just as good on a
+phone as on a desktop.
+
+In scope: the website, the API and database behind it, search,
+categories, favourites, recently played, ratings, optional
+accounts, and the admin panel. Out of scope: building the games
+themselves, payments, native apps, and ads.
+
+==============================================================

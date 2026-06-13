@@ -1,0 +1,34 @@
+PLIXORA
+Online Gaming Website - Scope of Work
+==============================================================
+
+The job is the whole Plixora site, front to back. On the front
+end that means the homepage (hero, category rows, popular and new
+games, recently played), a browse page with filtering and paging,
+a play page that loads the game in an iframe with full screen,
+search with live suggestions, the optional account pages (sign in,
+register, favourites, history), and the usual static pages (About,
+Contact, Privacy, Terms). Everything is responsive and shares one
+design system.
+
+Behind that sits a REST API for games, categories, search,
+ratings, favourites, history, and accounts, with login, input
+validation, rate limiting, and paging on the list endpoints. The
+database holds games, categories, users, favourites, play history,
+and ratings, with indexes for fast lookups and some seed data to
+start with. There is also an admin panel where the team logs in to
+add, edit, publish, and feature games and categories, and check
+basic play stats.
+
+The stack is PERN. React on the front end, Node and Express for the
+API, and PostgreSQL for the data, with JWT or sessions and hashed
+passwords for auth, and each game embedded in an iframe using the
+browser Fullscreen API.
+
+We will call it done when the pages, APIs, tables, and admin
+features all work together, a visitor can browse, search, and start
+a game in under five seconds without signing in, favourites and
+recently played stick around (locally when signed out, on the
+account when signed in), the site holds up on phone, tablet, and
+desktop, the layout matches the reference mockup.
+==============================================================

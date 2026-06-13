@@ -1,0 +1,44 @@
+PLIXORA - Online Gaming Website
+Acceptance Rubrics
+==============================================================
+
+1.  "Plixora" branding visible in header + footer on every page.
+2.  Tagline is exactly "Play Instantly. Anywhere. Free." with no rewording. Must appear on every page.
+3.  Primary buttons and active nav states use #7C5CFF. No substitutions.
+4.  No ad slots or banner placeholders on homepage, browse, or play pages.
+5.  Homepage header is sticky. Contains: logo, centered search bar, Sign in link.
+6.  Homepage has a horizontally scrollable chip row for categories. List: Action, Puzzle, Racing, Sports, Multiplayer, Arcade, Casual, .io, 2-Player.
+7.  Hero section on homepage rotates 3-5 featured games.
+8.  Homepage has separate game rows for Popular, New, plus one per category.
+9.  Game cards show thumbnail, title, category badge, star rating. Play overlay appears on hover.
+10. Footer has links to About, Contact, Privacy, Terms.
+11. Browse page (/category/:slug). Filterable paginated grid for that category.
+12. Play page (/game/:slug). Game loads in an iframe, supports fullscreen. Page also shows title, rating, tags, related-games row below.
+13. Search gives live suggestions as you type. Full results on submit.
+14. Sign in and Register pages exist and are linked from the header.
+15. Favourites page shows saved games. History page shows recently played, newest first.
+16. Static pages for About, Contact, Privacy, Terms are present and load.
+17. Responsive grid: 5-6 cards/row at >=1200px, 3-4 cards at 768-1199px, 2 cards below 768px. Nav collapses to hamburger below 768px.
+18. GET /api/games returns game list. Supports page, limit, category, sort params.
+19. GET /api/games/:slug returns single game by slug.
+20. GET /api/categories returns all categories.
+21. GET /api/search?q= matches games by title and tags.
+22. Register creates account, returns 201. Login returns token/session on valid creds, 401 on bad creds. Logout ends session, returns 200.
+23. Favourites: add/remove/list endpoints work. History: record play event + list recent plays.
+24. POST /api/ratings/:gameId submits a star rating and updates game average.
+25. API checks all inputs. Bad input returns appropriate status (400/401/404/429/500) with JSON { message }.
+26. Auth only required on account-specific endpoints (favourites, history writes, ratings). Everything else is public.
+27. Production deployment must be HTTPS.
+28. DB schema must include: games (id, slug, title, category_id, thumbnail_url, embed_url, rating_avg, plays, is_featured, is_published), categories (id, slug, name, cover_url), users (id, email, password_hash, display_name), favourites, play_history, ratings. See schema file for column details.
+29. Indexes on games.category_id, games.title, games.plays.
+30. Seed data: minimum 8 categories, minimum 30 games.
+31. Sign in is optional. Visitors can play any game without an account.
+32. Signed-out users: favourites + recently played persist in localStorage across reloads.
+33. Signed-in users: favourites + recently played sync to account, accessible from other devices.
+34. Passwords hashed. Never stored in plain text.
+35. Admin panel behind auth. Anonymous access rejected.
+36. Admin can create/edit/delete games and categories.
+37. Admin can publish, unpublish, or feature a game.
+38. Homepage load time under 2.5s on broadband.
+39. Catalogue + search API responses under 300ms.
+40. All images need alt text. All interactive elements keyboard-accessible.
